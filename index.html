@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Math Quiz App</title>
+</head>
+<body>
+  <div id="auth-container">
+    <h3>Login or Signup</h3>
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="password" id="password" placeholder="Password" required />
+    <button onclick="signup()">Sign Up</button>
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div id="user-info" style="display: none;">
+    <p>Welcome, <span id="user-email"></span>!</p>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <div id="quiz-container" style="display: none;">
+    <h3>Math Quiz</h3>
+    <div id="question"></div>
+    <input type="number" id="answer" placeholder="Your answer" step="0.01" />
+    <button onclick="checkAnswer()">Submit Answer</button>
+    <p id="result"></p>
+    <p>Score: <span id="current-score">0</span>/<span id="total-questions">0</span></p>
+  </div>
+
+  <div id="scoreboard" style="display: none;">
+    <h3>Your Scores</h3>
+    <ul id="score-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
